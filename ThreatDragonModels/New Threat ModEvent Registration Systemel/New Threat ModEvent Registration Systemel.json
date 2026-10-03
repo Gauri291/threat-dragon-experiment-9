@@ -1,0 +1,18 @@
+{
+  "version": "2.6.2",
+  "release_version": "1.0",
+  "released_at": "2026-10-03",
+  "summary": {
+    "title": "New Threat ModEvent Registration Systemel",
+    "owner": "Gauri Yadav",
+    "description": "Threat modeling of a web-based Event Registration System using the STRIDE methodology to identify security threats and their mitigations.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
