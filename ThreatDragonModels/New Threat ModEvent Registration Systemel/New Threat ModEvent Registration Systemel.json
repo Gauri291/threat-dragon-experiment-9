@@ -40,6 +40,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -123,7 +124,6 @@
               ]
             },
             "id": "e20ead8e-c0ea-4144-9347-d87f52d5ca93",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "User",
@@ -157,6 +157,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -240,7 +241,6 @@
               ]
             },
             "id": "1cb84d47-7a1e-438a-8dba-1b1a9b64fc0b",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web Browser",
@@ -258,8 +258,8 @@
           },
           {
             "position": {
-              "x": 134.99999999999977,
-              "y": -2692
+              "x": 230,
+              "y": -2690
             },
             "size": {
               "width": 180,
@@ -277,6 +277,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -360,7 +361,6 @@
               ]
             },
             "id": "d4bcd511-183c-4103-9da3-18464410d434",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Flask event \nresigstration \napplication",
@@ -381,8 +381,8 @@
           },
           {
             "position": {
-              "x": 124.99999999999977,
-              "y": -2432
+              "x": 270,
+              "y": -2430
             },
             "size": {
               "width": 250,
@@ -403,6 +403,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -486,7 +487,6 @@
               ]
             },
             "id": "5baaa103-1465-4957-8f80-6fba3a21943e",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "Database",
@@ -502,58 +502,6 @@
               "storesInventory": false,
               "threats": []
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "d796b4c9-72cc-453c-895c-d951627c7bb8",
-            "source": {
-              "x": 140,
-              "y": -2520
-            },
-            "target": {
-              "x": 168,
-              "y": -2432
-            },
-            "vertices": [
-              {
-                "x": 110,
-                "y": -2500
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -646,6 +594,58 @@
               "x": 265,
               "y": -2970
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "read/write event data \nreturn data",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "read/write event data \nreturn data"
+            ],
+            "id": "d407a304-cbe5-4f16-8388-9034496c0cd9",
+            "source": {
+              "x": 317,
+              "y": -2532
+            },
+            "target": {
+              "x": 417,
+              "y": -2432
+            },
+            "vertices": [
+              {
+                "x": 370,
+                "y": -2480
+              }
+            ]
           }
         ]
       }
