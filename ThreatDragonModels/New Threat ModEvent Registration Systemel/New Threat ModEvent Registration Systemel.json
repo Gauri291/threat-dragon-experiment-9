@@ -138,7 +138,7 @@
                   "id": "4e72288b-5200-48a2-af4e-0086752f91a2",
                   "title": "Unauthorized User Impersonation",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "An attacker may impersonate a legitimate user to access the event registration system or submit registrations without authorization.",
                   "mitigation": "Implement strong authentication, secure session management, and appropriate access controls.",
@@ -162,7 +162,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -289,7 +289,7 @@
                   "id": "abcc8348-4d44-4360-b3e2-7a231983c6eb",
                   "title": "Registration Data Tampering",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Tampering",
                   "description": "An attacker may modify registration details or submitted form data before it reaches the application.",
                   "mitigation": "Validate all input on the server, use HTTPS, and verify submitted data before processing it.",
@@ -301,7 +301,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
@@ -431,7 +431,7 @@
                   "id": "251b6e02-8dfd-4c81-b2f6-758ad9732fbc",
                   "title": "Sensitive Data Disclosure",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Information disclosure",
                   "description": "An attacker may access users' personal information or event registration records without authorization.",
                   "mitigation": "Use HTTPS, encrypt sensitive data, and enforce access controls.",
@@ -444,7 +444,7 @@
                   "id": "cd271d44-6a38-48ff-bdd4-9af68bbe3dda",
                   "title": "Denial of Service",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Denial of service",
                   "description": "n attacker sends excessive requests that may make the event registration service unavailable.",
                   "mitigation": "Apply rate limiting, request throttling, and monitoring.",
@@ -483,7 +483,7 @@
                   "id": "b8919ce1-6bc0-4a6e-9686-17794df0fba2",
                   "title": "Repudiation",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Repudiation",
                   "description": "A user may deny submitting or modifying an event registration if the activity is not recorded.",
                   "mitigation": "Maintain secure audit logs with timestamps and user identifiers.",
@@ -496,22 +496,15 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 1,
-                "repudiation": 2,
-                "informationDisclosure": 1,
-                "denialOfService": 1,
+                "repudiation": 3,
+                "informationDisclosure": 2,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             },
             "children": [
               "e18ecb91-fc2e-4b4e-8504-1c11b9151b3d"
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "position": {
@@ -641,7 +634,7 @@
                   "id": "63800818-1bf7-40f3-85d3-635f2ce1fe39",
                   "title": "Unauthorized Database Access",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Information disclosure",
                   "description": "An attacker may gain unauthorized access to the database and view, modify, or delete event registration records.",
                   "mitigation": "Apply least-privilege database permissions, strong credentials, and role-based access control.",
@@ -654,9 +647,16 @@
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
